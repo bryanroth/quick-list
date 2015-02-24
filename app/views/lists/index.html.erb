@@ -1,0 +1,16 @@
+<h1>Lists</h1>
+
+<%= link_to 'New List', new_list_path %>
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Date Created</th>
+	</tr>
+
+	<% @lists.each do |list| %>
+	<tr>
+		<td><%= list.title %></td>
+		<td><%= list.created_at %></td>
+	</tr>
+	<% end %>
+</table>
